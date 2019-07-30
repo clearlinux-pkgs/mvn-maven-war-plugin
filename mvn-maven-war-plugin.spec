@@ -4,11 +4,13 @@
 #
 Name     : mvn-maven-war-plugin
 Version  : 2.6
-Release  : 2
+Release  : 3
 URL      : https://github.com/apache/maven-war-plugin/archive/maven-war-plugin-2.6.tar.gz
 Source0  : https://github.com/apache/maven-war-plugin/archive/maven-war-plugin-2.6.tar.gz
 Source1  : https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-war-plugin/2.6/maven-war-plugin-2.6.jar
 Source2  : https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-war-plugin/2.6/maven-war-plugin-2.6.pom
+Source3  : https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-war-plugin/3.1.0/maven-war-plugin-3.1.0.jar
+Source4  : https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-war-plugin/3.1.0/maven-war-plugin-3.1.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -31,10 +33,16 @@ data components for the mvn-maven-war-plugin package.
 
 %install
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-war-plugin/2.6
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-war-plugin/2.6
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-war-plugin/2.6/maven-war-plugin-2.6.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-war-plugin/2.6
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-war-plugin/2.6
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-war-plugin/2.6/maven-war-plugin-2.6.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-war-plugin/3.1.0
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-war-plugin/3.1.0/maven-war-plugin-3.1.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-war-plugin/3.1.0
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-war-plugin/3.1.0/maven-war-plugin-3.1.0.pom
 
 
 %files
@@ -44,3 +52,5 @@ cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugin
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/org/apache/maven/plugins/maven-war-plugin/2.6/maven-war-plugin-2.6.jar
 /usr/share/java/.m2/repository/org/apache/maven/plugins/maven-war-plugin/2.6/maven-war-plugin-2.6.pom
+/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-war-plugin/3.1.0/maven-war-plugin-3.1.0.jar
+/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-war-plugin/3.1.0/maven-war-plugin-3.1.0.pom
