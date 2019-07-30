@@ -4,7 +4,7 @@
 #
 Name     : mvn-maven-war-plugin
 Version  : 2.6
-Release  : 3
+Release  : 4
 URL      : https://github.com/apache/maven-war-plugin/archive/maven-war-plugin-2.6.tar.gz
 Source0  : https://github.com/apache/maven-war-plugin/archive/maven-war-plugin-2.6.tar.gz
 Source1  : https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-war-plugin/2.6/maven-war-plugin-2.6.jar
